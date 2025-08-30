@@ -26,40 +26,40 @@ import { onMounted } from 'vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-const projects = [
-  {
-    to: '/projects/attendance',
-    label: 'Attendance Management System',
-    description: 'A streamlined tool for tracking and managing attendance records.',
-    animation: 'fade-up',
-    icon: 'fas fa-calendar-check',
-    color: '#0d6efd'
-  },
-  {
-    to: '/projects/portfolio',
-    label: 'Portfolio Website',
-    description: 'A personal showcase blending design, storytelling, and tech skills.',
-    animation: 'zoom-in',
-    icon: 'fas fa-user-circle',
-    color: '#6610f2'
-  },
-  {
-    to: '/projects/fitness',
-    label: 'Fitness Management System',
-    description: 'Helping users track workouts, nutrition, and progress with ease.',
-    animation: 'flip-left',
-    icon: 'fas fa-dumbbell',
-    color: '#198754'
-  },
-  {
-    to: '/projects/financial-literacy',
-    label: 'Financial Literacy System',
-    description: 'An educational platform for building money management skills.',
-    animation: 'fade-right',
-    icon: 'fas fa-coins',
-    color: '#fd7e14'
-  }
-]
+// const projects = [
+//   {
+//     to: '/projects/attendance',
+//     label: 'Attendance Management System',
+//     description: 'A streamlined tool for tracking and managing attendance records.',
+//     animation: 'fade-up',
+//     icon: 'fas fa-calendar-check',
+//     color: '#0d6efd'
+//   },
+//   {
+//     to: '/projects/portfolio',
+//     label: 'Portfolio Website',
+//     description: 'A personal showcase blending design, storytelling, and tech skills.',
+//     animation: 'zoom-in',
+//     icon: 'fas fa-user-circle',
+//     color: '#6610f2'
+//   },
+//   {
+//     to: '/projects/fitness',
+//     label: 'Fitness Management System',
+//     description: 'Helping users track workouts, nutrition, and progress with ease.',
+//     animation: 'flip-left',
+//     icon: 'fas fa-dumbbell',
+//     color: '#198754'
+//   },
+//   {
+//     to: '/projects/financial-literacy',
+//     label: 'Financial Literacy System',
+//     description: 'An educational platform for building money management skills.',
+//     animation: 'fade-right',
+//     icon: 'fas fa-coins',
+//     color: '#fd7e14'
+//   }
+// ]
 
 onMounted(() => {
   AOS.init({
@@ -133,3 +133,4 @@ onMounted(() => {
   margin: 0;
 }
 </style>
+
