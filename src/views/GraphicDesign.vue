@@ -1,5 +1,5 @@
 <template lang="pug">
-  section#graphic-design-section.container.py-5
+section#graphic-design-section.container.py-5
     .row
       .col-md-12.text-center
         h2.display-5(data-aos="fade-down") THE ART OF VISUAL STORYTELLING
@@ -154,3 +154,4 @@ section#cta-svg.container.text-center.mt-4
     path(d="M10 40 Q40 10 70 40 Q40 70 10 40 Z" stroke="purple" stroke-width="2" fill="none")
       animate(attributeName="stroke-dashoffset" from="500" to="0" dur="3s" repeatCount="indefinite")
 </template>
+
