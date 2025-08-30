@@ -68,6 +68,8 @@ onMounted(() => {
     easing: 'ease-out-cubic'
   })
 })
+
+defineExpose({ projects })
 </script>
 
 <style scoped lang="scss">
@@ -151,3 +153,4 @@ onMounted(() => {
   }
 }
 </style>
+
