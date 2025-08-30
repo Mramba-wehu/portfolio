@@ -26,40 +26,40 @@ import { onMounted } from 'vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-// const projects = [
-//   {
-//     to: '/projects/attendance',
-//     label: 'Attendance Management System',
-//     description: 'A streamlined tool for tracking and managing attendance records.',
-//     animation: 'fade-up',
-//     icon: 'fas fa-calendar-check',
-//     color: '#0d6efd'
-//   },
-//   {
-//     to: '/projects/portfolio',
-//     label: 'Portfolio Website',
-//     description: 'A personal showcase blending design, storytelling, and tech skills.',
-//     animation: 'zoom-in',
-//     icon: 'fas fa-user-circle',
-//     color: '#6610f2'
-//   },
-//   {
-//     to: '/projects/fitness',
-//     label: 'Fitness Management System',
-//     description: 'Helping users track workouts, nutrition, and progress with ease.',
-//     animation: 'flip-left',
-//     icon: 'fas fa-dumbbell',
-//     color: '#198754'
-//   },
-//   {
-//     to: '/projects/financial-literacy',
-//     label: 'Financial Literacy System',
-//     description: 'An educational platform for building money management skills.',
-//     animation: 'fade-right',
-//     icon: 'fas fa-coins',
-//     color: '#fd7e14'
-//   }
-// ]
+const projects = [
+  {
+    to: '/projects/attendance',
+    label: 'Attendance Management System',
+    description: 'A streamlined tool for tracking and managing attendance records.',
+    animation: 'fade-up',
+    icon: 'fas fa-calendar-check',
+    color: '#0d6efd'
+  },
+  {
+    to: '/projects/portfolio',
+    label: 'Portfolio Website',
+    description: 'A personal showcase blending design, storytelling, and tech skills.',
+    animation: 'zoom-in',
+    icon: 'fas fa-user-circle',
+    color: '#6610f2'
+  },
+  {
+    to: '/projects/fitness',
+    label: 'Fitness Management System',
+    description: 'Helping users track workouts, nutrition, and progress with ease.',
+    animation: 'flip-left',
+    icon: 'fas fa-dumbbell',
+    color: '#198754'
+  },
+  {
+    to: '/projects/financial-literacy',
+    label: 'Financial Literacy System',
+    description: 'An educational platform for building money management skills.',
+    animation: 'fade-right',
+    icon: 'fas fa-coins',
+    color: '#fd7e14'
+  }
+]
 
 onMounted(() => {
   AOS.init({
@@ -77,18 +77,25 @@ onMounted(() => {
   margin: 0;
   display: grid;
   gap: 1.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .project-item {
   background: #fff;
-  border-radius: 8px;
-  padding: 1.2rem 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 
     .icon-wrapper {
       animation: pulse-glow 1.2s infinite;
@@ -96,41 +103,51 @@ onMounted(() => {
   }
 
   a {
+    display: block;
     color: inherit;
     text-decoration: none;
-    display: block;
   }
 }
 
 .icon-wrapper {
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
   transition: box-shadow 0.3s ease;
 }
 
 @keyframes pulse-glow {
-  0% { box-shadow: 0 0 0px rgba(0, 0, 0, 0); }
-  50% { box-shadow: 0 0 12px currentColor; }
-  100% { box-shadow: 0 0 0px rgba(0, 0, 0, 0); }
+  0% { box-shadow: 0 0 0px rgba(0,0,0,0); }
+  50% { box-shadow: 0 0 16px currentColor; }
+  100% { box-shadow: 0 0 0px rgba(0,0,0,0); }
 }
 
 .project-title {
-  font-size: 1.2rem;
-  margin: 0 0 0.4rem;
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem;
   font-weight: 600;
 }
 
 .project-desc {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #6c757d;
   margin: 0;
 }
-</style>
 
+/* Make mobile cards stretch nicely */
+@media (max-width: 767px) {
+  .project-item {
+    text-align: center;
+  }
+  .icon-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+</style>
