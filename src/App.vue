@@ -8,7 +8,13 @@ defineExpose({RouterView, Header, Footer});
 
 <template lang="pug">
 Header
-main.container.mt-5.py-2.text-light
+main.container.mt-5.py-2.text-light.portfolio
   RouterView
 Footer
 </template>
+<style scope>
+  main.portfolio {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+</style>
