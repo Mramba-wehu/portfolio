@@ -10,9 +10,11 @@
     "pro": "node --no-warnings app.js"
   },
   "dependencies": {
+    "@types/aos": "^3.0.7",
     "@types/bootstrap": "^5.2.10",
     "@types/pug": "^2.0.10",
     "@types/vue-router": "^2.0.0",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.7",
     "emailjs-com": "^3.2.0",
     "express": "^5.1.0",
