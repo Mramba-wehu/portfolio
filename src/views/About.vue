@@ -1,6 +1,6 @@
 <template lang="pug">
-section.about.row.py-5.justify-content-center.align-items-center
-  .container
+section.about.row.justify-content-center.align-items-center
+  .container.about-container
     .card.shadow-lg.border-0.bg-transparent
       .card-body.p-4
         h2.card-title.text-center.mb-4.text-secondary.fw-bold
@@ -14,7 +14,7 @@ section.about.row.py-5.justify-content-center.align-items-center
           | Above all, I am committed to youth empowerment through tech using my skills to inspire, educate, and open doors for the next generation of innovators.
 
         h3.text-secondary.text-center.mb-3.fw-bold Skills & Focus
-        ul.list-group.list-group-flush
+        ul.list-group.list-group-flush.skills-list
           li.list-group-item.bg-transparent.border-0.d-flex.align-items-center
             i.fas.fa-code.text-success.me-3
             span.text-secondary Programming Languages
@@ -38,12 +38,33 @@ section.about.row.py-5.justify-content-center.align-items-center
 
 <style scoped lang="scss">
 .about {
-  height: 80vh;
+  height: 85vh;
+  padding: 1em 0 1em 0;
+}
+
+.about-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .card {
   max-width: 700px;
   margin: 0 auto;
   border-radius: 1rem;
+  position: absolute;
+  top: 1em;
+  width: 100%;
+  height: 95%;
+  overflow: hidden;
+}
+
+.skills-list {
+  width: 100%;
+  height: 30%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 </style>
+
