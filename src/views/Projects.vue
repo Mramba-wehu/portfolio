@@ -1,5 +1,5 @@
 <template lang="pug">
-.container.mt-5
+.container.mt-3
   template(v-if="isRoot")
     h1.mb-4.text-center(data-aos="fade-down") My Projects
 
@@ -17,7 +17,7 @@
           h2.project-title {{ project.label }}
           p.project-desc {{ project.description }}
 
-  .projects-children.mt-4
+  .projects-children
     router-view
 </template>
 
@@ -157,4 +157,5 @@ defineExpose({ projects, isRoot })
   }
 }
 </style>
+
 
