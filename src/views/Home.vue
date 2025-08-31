@@ -1,5 +1,5 @@
 <template lang="pug">
-    .row.justify-content-center.align-items-center
+    .row.justify-content-center.align-items-center.py-5
         .col-md-8
             h1 Greetings
             p I am Mramba Edison.
@@ -19,4 +19,5 @@
   padding: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 </style>
