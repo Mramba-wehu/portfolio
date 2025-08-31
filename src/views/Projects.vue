@@ -1,28 +1,30 @@
 <template lang="pug">
 .container.mt-5
-  h1.mb-4.text-center(data-aos="fade-down") My Projects
+  template(v-if="isRoot")
+    h1.mb-4.text-center(data-aos="fade-down") My Projects
 
-  ul.projects-list
-    li.project-item(
-      v-for="(project, index) in projects"
-      :key="project.to"
-      :data-aos="project.animation"
-      :data-aos-delay="index * 100"
-      :style="{ borderTop: `4px solid ${project.color}` }"
-    )
-      router-link(:to="project.to")
-        .icon-wrapper(:style="{ backgroundColor: project.color }")
-          i(:class="project.icon")
-        h2.project-title {{ project.label }}
-        p.project-desc {{ project.description }}
+    ul.projects-list
+      li.project-item(
+        v-for="(project, index) in projects"
+        :key="project.to"
+        :data-aos="project.animation"
+        :data-aos-delay="index * 100"
+        :style="{ borderTop: `4px solid ${project.color}` }"
+      )
+        router-link(:to="project.to")
+          .icon-wrapper(:style="{ backgroundColor: project.color }")
+            i(:class="project.icon")
+          h2.project-title {{ project.label }}
+          p.project-desc {{ project.description }}
 
-  //- Router view for child routes
+  //- Router view for child routes (always shown)
   .projects-children.mt-4
     router-view
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, computed } from 'vue'
+import { useRoute } from 'vue-router'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -60,6 +62,9 @@ const projects = [
     color: '#fd7e14'
   }
 ]
+
+const route = useRoute()
+const isRoot = computed(() => route.path === '/projects')
 
 onMounted(() => {
   AOS.init({
@@ -153,4 +158,3 @@ defineExpose({ projects })
   }
 }
 </style>
-
