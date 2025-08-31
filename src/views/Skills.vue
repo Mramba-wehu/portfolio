@@ -1,21 +1,23 @@
 <template lang="pug">
 .container.mt-5
-  h2.mb-4.text-center(data-aos="fade-down") My Skills
+  // 👉 Only show header & cards if at /skills root
+  template(v-if="$route.name === 'skills'")
+    h2.mb-4.text-center(data-aos="fade-down") My Skills
 
-  .skills-block(data-aos="fade-up" data-aos-delay="100")
-    router-link.skill-card(to="/skills/modelling")
-      i.fas.fa-user.me-2
-      | Modelling
-    router-link.skill-card(to="/skills/graphic-design")
-      i.fas.fa-paint-brush.me-2
-      | Graphic Design
-    router-link.skill-card(to="/skills/hardware-maintenance")
-      i.fas.fa-tools.me-2
-      | Hardware Maintenance
+    .skills-block(data-aos="fade-up" data-aos-delay="100")
+      router-link.skill-card(to="/skills/modelling")
+        i.fas.fa-user.me-2
+        | Modelling
+      router-link.skill-card(to="/skills/graphic-design")
+        i.fas.fa-paint-brush.me-2
+        | Graphic Design
+      router-link.skill-card(to="/skills/hardware-maintenance")
+        i.fas.fa-tools.me-2
+        | Hardware Maintenance
 
-  //- Uncomment below if you want to render child routes
-  // .skills-children.mt-4
-  //   router-view
+  // 👉 Child views will show here instead
+  .skills-children.mt-4
+    router-view
 </template>
 
 <script setup lang="ts">
@@ -31,6 +33,7 @@ onMounted(() => {
   })
 })
 </script>
+
 
 <style scoped>
 .skills-block {
@@ -63,3 +66,4 @@ onMounted(() => {
   color: #fff;
 }
 </style>
+
