@@ -1,5 +1,5 @@
 <template lang="pug">
-.container.mt-5
+.container
   h1 ATTENDANCE MANAGEMENT SYSTEM.
   h2 "Empowering Institutions Through Precision, Purpose, and Faith"
   p This is a web-based attendance management system designed to streamline and enhance the process of tracking and managing attendance for educational institutions, businesses, or organizations. The system offers a user-friendly interface for administrators, teachers, and students to efficiently record, monitor, and analyze attendance data.
@@ -77,3 +77,4 @@
 
   p Feel free to reach out if you want to discuss the project, collaborate, or just share your thoughts. Together, we can build a future where technology and faith walk hand in hand.
 </template>
+
