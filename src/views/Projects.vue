@@ -17,7 +17,6 @@
           h2.project-title {{ project.label }}
           p.project-desc {{ project.description }}
 
-  //- Router view for child routes (always shown)
   .projects-children.mt-4
     router-view
 </template>
@@ -74,7 +73,7 @@ onMounted(() => {
   })
 })
 
-defineExpose({ projects })
+defineExpose({ projects, isRoot })
 </script>
 
 <style scoped lang="scss">
@@ -158,3 +157,4 @@ defineExpose({ projects })
   }
 }
 </style>
+
