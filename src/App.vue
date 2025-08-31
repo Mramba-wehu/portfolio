@@ -14,6 +14,7 @@ Footer
 </template>
 <style scope>
   main.portfolio {
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
   }
