@@ -54,7 +54,20 @@ section.financial-literacy-section
 </template>
 
 <script lang="ts" setup>
-// Static content for now; interactivity can be added later
+import { onMounted, nextTick } from "vue"
+import AOS from "aos"
+import "aos/dist/aos.css"
+
+onMounted(async () => {
+  await nextTick()
+  AOS.init({
+    once: false,
+    duration: 800,
+    easing: "ease-in-out",
+  })
+  // Force refresh so Vue-rendered blocks animate
+  AOS.refresh()
+})
 </script>
 
 <style lang="scss" scoped>
@@ -124,3 +137,4 @@ section.financial-literacy-section
   }
 }
 </style>
+
