@@ -56,7 +56,7 @@ section.about.row.justify-content-center.align-items-center
   position: absolute;
   top: 1em;
   width: 100%;
-  height: 95%;
+  height: 97%;
   overflow: hidden;
 }
 
@@ -67,4 +67,5 @@ section.about.row.justify-content-center.align-items-center
   overflow-y: scroll;
 }
 </style>
+
 
