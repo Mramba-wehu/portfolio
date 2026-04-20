@@ -419,6 +419,27 @@ a {
     font-size: 0.95rem;
 }
 
+.project-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.project-features li {
+    font-size: 0.9rem;
+    color: var(--clr-text-sec);
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.project-features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--clr-primary-light);
+    font-weight: bold;
+}
+
 .project-links {
     display: flex;
     gap: 1rem;

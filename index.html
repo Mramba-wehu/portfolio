@@ -95,14 +95,34 @@
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card fade-in-up">
-                    <div class="project-img-placeholder">
+                    <div class="project-img-placeholder" style="height: 180px;">
                         <i class="fa-solid fa-clipboard-user"></i>
                     </div>
                     <div class="project-info">
                         <h3>Attendance Management System</h3>
-                        <p>A full stack application for tracking and managing attendance efficiently. Built with modern web technologies, providing a seamless user experience.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Mramba-wehu/ATTENDANCE-MANAGEMENT-SYSTEM-CLIENT.git" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> Repository</a>
+                        <p style="margin-bottom: 0.8rem;">A full stack application for tracking and managing attendance efficiently. It utilizes separate client and server repositories.</p>
+                        
+                        <ul class="project-features">
+                            <li><strong>Admin:</strong> Creates both student and lecturer accounts.</li>
+                            <li><strong>Lecturer:</strong> Logs in, generates QR codes, reviews pleas, and sets lectures.</li>
+                            <li><strong>Student:</strong> Accesses system, attends class via QR scan, and writes pleas for inattendance.</li>
+                        </ul>
+                        
+                        <div class="project-links-container" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
+                            <div class="link-group">
+                                <span style="font-size: 0.9rem; font-weight: 600; color: var(--clr-text-main); display: block; margin-bottom: 0.5rem;">Live Apps(Open server first, then open client):</span>
+                                <div class="project-links">
+                                    <a href="https://attendance-management-system-server.onrender.com" target="_blank" class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;"><i class="fa-solid fa-server"></i> Server</a>
+                                    <a href="https://attendance-management-system-client.onrender.com" target="_blank" class="btn btn-primary" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;"><i class="fa-solid fa-globe"></i> Client</a>
+                                </div>
+                            </div>
+                            <div class="link-group">
+                                <span style="font-size: 0.9rem; font-weight: 600; color: var(--clr-text-main); display: block; margin-bottom: 0.5rem;">Source Code:</span>
+                                <div class="project-links">
+                                    <a href="https://github.com/Mramba-wehu/ATTENDANCE-MANAGEMENT-SYSTEM-CLIENT.git" target="_blank" class="btn btn-outline" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;"><i class="fa-brands fa-github"></i> Client</a>
+                                    <a href="https://github.com/Mramba-wehu/ATTENDANCE-MANAGEMENT-SYSTEM-SERVER" target="_blank" class="btn btn-outline" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;"><i class="fa-brands fa-github"></i> Server</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
