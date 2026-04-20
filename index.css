@@ -101,6 +101,7 @@ a {
 .highlight {
     background: linear-gradient(120deg, #ff4d6d, var(--clr-primary));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -281,36 +282,28 @@ a {
     100% { transform: translate(30px, -50px) scale(1.1); }
 }
 
-/* Glass Cards in Hero */
-.glass-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    padding: 1.5rem;
-    border-radius: 16px;
+/* Profile Image in Hero */
+.profile-img-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    padding: 8px;
+    background: linear-gradient(135deg, var(--clr-primary-light), var(--clr-primary-dark), #1a1a24);
+    box-shadow: 0 10px 40px rgba(128, 0, 32, 0.4);
+    animation: bobble 6s infinite ease-in-out alternate;
+    z-index: 5;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    position: absolute;
-    box-shadow: var(--glass-shadow);
-    animation: bobble 4s infinite ease-in-out alternate;
 }
 
-.glass-card i {
-    font-size: 1.5rem;
-    color: var(--clr-primary-light);
-}
-
-.glass-card.card-2 {
-    top: 60%;
-    left: 10%;
-    animation-delay: -2s;
-}
-
-.glass-card:not(.card-2) {
-    top: 30%;
-    right: 15%;
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--clr-bg-main);
 }
 
 @keyframes bobble {
